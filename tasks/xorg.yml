@@ -1,0 +1,39 @@
+---
+- name: Install Xorg base
+  pacman: name={{ item }} state=present
+  with_items:
+    - xorg-server
+    - xorg-xprop
+    - xorg-xmodmap
+    - xorg-xrandr
+    - xorg-xinit
+    - xorg-xev
+    - xorg-xset
+    - xorg-xrdb
+
+- name: Set up Xorg for Thinkpad X230
+  pacman: name={{ item }} state=present
+  with_items:
+    - xf86-video-intel
+    - xf86-input-synaptics
+  when: model == "Thinkpad X230"
+
+- name: Install VirtualBox guest utilities
+  pacman: name={{ item }} state=present
+  with_items:
+    - virtualbox-guest-utils
+    - linux-headers  # needed for virtualbox-guest-dkms which is pulled in by
+                     # virtualbox-guest-utils
+  when: model == "VirtualBox"
+
+- name: Set up autoloading of VirtualBox modules
+  copy: src=files/virtualbox/guest-modules dest=/etc/modules-load.d/virtualbox-guest.conf
+  when: model == "VirtualBox"
+
+- name: Configure vboxservice
+  service: name=vboxservice state=started enabled=yes
+  when: model == "VirtualBox"
+
+- name: Depmod
+  command: depmod
+  changed_when: false

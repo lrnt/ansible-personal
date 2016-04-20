@@ -1,0 +1,11 @@
+---
+ansible_python_interpreter: /usr/bin/python2
+
+users:
+  - laurent
+
+users_inc_super:
+  - laurent
+  - root
+
+model: "Thinkpad X230"

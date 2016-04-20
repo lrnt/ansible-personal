@@ -1,0 +1,36 @@
+---
+- hosts: localhost
+  connection: local
+
+  vars_prompt:
+    - name: config_file
+      prompt: "Which vars should I load?"
+      private: no
+
+  vars_files:
+    - vars/{{ config_file }}.yml
+
+  tasks:
+    - name: Get size of long to determine architecture
+      command: getconf LONG_BIT
+      register: long_bit
+      changed_when: false
+
+    # Used, hackily, to not reinstall AUR packages
+    - name: Get list of installed packages
+      command: pacman -Qq
+      register: installed_packages
+      changed_when: false
+
+    - include: tasks/pacman.yml
+    - include: tasks/ssh.yml
+    - include: tasks/zsh.yml
+    - include: tasks/users.yml
+    - include: tasks/aur.yml
+    - include: tasks/sudo.yml
+    - include: tasks/fonts.yml
+    - include: tasks/xorg.yml
+    - include: tasks/blacklist-pcspkr.yml
+    - include: tasks/desktop.yml
+    - include: tasks/basic-tools.yml
+    - include: tasks/dotfiles.yml user=laurent

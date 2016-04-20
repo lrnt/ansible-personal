@@ -1,0 +1,25 @@
+---
+- name: Install i3 wm and tools
+  pacman: name={{ item }} state=present
+  with_items:
+    - i3-wm
+    - i3lock
+    - i3status
+
+- name: Install desktop utilities with pacman
+  pacman: name={{ item }} state=present
+  with_items:
+    - dmenu
+    - imagemagick
+    - ghostscript
+    - rxvt-unicode
+    - alsa-utils
+    - libnotify
+    - dunst
+    - redshift
+
+- name: Install py3status
+  yaourt: name=py3status
+  become: yes
+  become_user: makepkg
+

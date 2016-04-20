@@ -1,0 +1,19 @@
+#!/bin/sh -e
+
+pkg=$1
+
+temp=$(mktemp -d)
+
+cd "$temp"
+
+git clone http://aur.archlinux.org/"$pkg".git
+
+cd "$pkg"
+
+chown -R nobody "$temp"
+sudo -u nobody makepkg
+pacman --noconfirm -U *.pkg.tar.xz
+
+cd /
+
+rm -rf "$temp"

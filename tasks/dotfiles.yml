@@ -1,0 +1,12 @@
+---
+- name: Clone dotfiles for {{ user }}
+  become: yes
+  become_user: "{{ user }}"
+  git: repo=git://github.com/lrnt/dotfiles.git dest=~{{ user }}/dotfiles accept_hostkey=yes update=no
+
+- name: Set up dotfiles for {{ user }}
+  become: yes
+  become_user: "{{ user }}"
+  command: ./bootstrap.sh chdir="~{{ user }}/dotfiles"
+  changed_when: false
+
