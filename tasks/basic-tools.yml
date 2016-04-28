@@ -4,3 +4,4 @@
   with_items:
     - vim
     - git
+    - ack
