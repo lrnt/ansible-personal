@@ -18,6 +18,9 @@
     - xf86-input-synaptics
   when: model == "Thinkpad X230"
 
+- name: Set up Xorg keyboard settings
+  copy: src=files/xorg/00-keyboard.conf dest=/etc/X11/xorg.conf.d/00-keyboard.conf
+
 - name: Install VirtualBox guest utilities
   pacman: name={{ item }} state=present
   with_items:
