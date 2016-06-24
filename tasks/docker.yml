@@ -1,0 +1,10 @@
+---
+- name: Install docker
+  pacman: name=docker state=present
+
+- name: Add local user to sudo group
+  user: name={{ item }} groups=docker append=yes
+  with_items: '{{ users }}'
+
+- name: Enable docker daemon
+  service: name=docker state=started enabled=yes
