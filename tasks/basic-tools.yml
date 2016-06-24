@@ -10,6 +10,7 @@
     - rsync
     - openvpn
     - pass
+    - ranger
 
 - name: Install pgcli
   yaourt: name=pgcli
