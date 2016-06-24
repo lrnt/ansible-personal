@@ -22,6 +22,7 @@
       register: installed_packages
       changed_when: false
 
+    - include: tasks/ntp.yml
     - include: tasks/pacman.yml
     - include: tasks/ssh.yml
     - include: tasks/zsh.yml
