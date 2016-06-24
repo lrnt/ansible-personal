@@ -17,9 +17,14 @@
     - libnotify
     - dunst
     - redshift
+    - chromium
+    - scrot
 
-- name: Install py3status
-  yaourt: name=py3status
+- name: Install desktop utilities with yaourt
+  yaourt: name={{ item }}
+  with_items:
+    - py3status
+    - slack-desktop
   become: yes
   become_user: makepkg
 

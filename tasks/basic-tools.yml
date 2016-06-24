@@ -6,3 +6,12 @@
     - git
     - ack
     - httpie
+    - postgresql
+    - rsync
+    - openvpn
+    - pass
+
+- name: Install pgcli
+  yaourt: name=pgcli
+  become: true
+  become_user: makepkg
