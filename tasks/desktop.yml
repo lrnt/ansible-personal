@@ -20,6 +20,8 @@
     - chromium
     - scrot
     - xbindkeys
+    - feh
+    - evince
 
 - name: Install desktop utilities with yaourt
   yaourt: name={{ item }}
