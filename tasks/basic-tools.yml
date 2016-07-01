@@ -11,6 +11,7 @@
     - openvpn
     - pass
     - ranger
+    - flake8
 
 - name: Install pgcli
   yaourt: name=pgcli
