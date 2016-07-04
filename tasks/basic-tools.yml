@@ -12,6 +12,8 @@
     - pass
     - ranger
     - flake8
+    - bc
+    - net-tools
 
 - name: Install pgcli
   yaourt: name=pgcli
