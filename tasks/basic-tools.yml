@@ -11,6 +11,7 @@
     - openvpn
     - pass
     - ranger
+    - ipython
     - flake8
     - bc
     - net-tools
