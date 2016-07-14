@@ -8,4 +8,7 @@ users_inc_super:
   - laurent
   - root
 
+wifi:
+  auto: false
+
 model: VirtualBox
