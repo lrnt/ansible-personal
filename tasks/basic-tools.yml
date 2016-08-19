@@ -20,6 +20,7 @@
     - python2-pip
     - python-virtualenv
     - python2-virtualenv
+    - unzip
 
 - name: Install pgcli
   yaourt: name=pgcli
