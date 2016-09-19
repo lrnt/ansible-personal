@@ -9,7 +9,7 @@ users_inc_super:
   - root
 
 wifi:
-  auto: true
+  auto: false
   interface: wlp3s0
 
 model: "Work Tower"
