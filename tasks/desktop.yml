@@ -20,7 +20,7 @@
     - chromium
     - scrot
     - xbindkeys
-    - feh
+    - sxiv
     - evince
 
 - name: Install desktop utilities with yaourt
