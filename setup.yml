@@ -37,4 +37,5 @@
     - include: tasks/basic-tools.yml
     - include: tasks/docker.yml
     - include: tasks/email.yml
+    - include: tasks/smartcard.yml
     - include: tasks/dotfiles.yml user=laurent

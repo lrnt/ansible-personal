@@ -1,0 +1,9 @@
+- name: Install smartcard tools
+  pacman: name={{ item }} state=present
+  with_items:
+    - pcsc-tools
+    - ccid
+    - libusb-compat
+
+- name: Enable pcscd
+  service: name=pcscd state=started enabled=yes
