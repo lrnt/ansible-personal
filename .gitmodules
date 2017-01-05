@@ -1,3 +1,6 @@
 [submodule "library/external_modules/ansible-yaourt"]
 	path = library/external_modules/ansible-yaourt
 	url = https://github.com/cdown/ansible-yaourt
+[submodule "library/external_modules/ansible-pipsi"]
+	path = library/external_modules/ansible-pipsi
+	url = https://github.com/lrnt/ansible-pipsi.git
