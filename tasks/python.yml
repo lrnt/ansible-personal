@@ -8,3 +8,18 @@
     - python2-virtualenv
     - ipython
     - flake8
+
+- name: Install pipsi
+  yaourt: name=pipsi
+  become: true
+  become_user: makepkg
+
+- name: Install packages with pipsi
+  pipsi: name={{ item }} state=present
+  with_items:
+    - httpie
+    - pgcli
+    - py3status
+  environment:
+    - PIPSI_HOME: /usr/local/venvs
+    - PIPSI_BINDIR: /usr/local/bin

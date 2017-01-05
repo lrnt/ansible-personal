@@ -23,11 +23,8 @@
     - sxiv
     - evince
 
-- name: Install desktop utilities with yaourt
-  yaourt: name={{ item }}
-  with_items:
-    - py3status
-    - slack-desktop
+- name: Install slack
+  yaourt: name=slack-desktop
   become: yes
   become_user: makepkg
 

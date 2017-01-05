@@ -5,7 +5,6 @@
     - gvim
     - git
     - ack
-    - httpie
     - postgresql
     - rsync
     - openvpn
@@ -15,8 +14,3 @@
     - net-tools
     - nfs-utils
     - unzip
-
-- name: Install pgcli
-  yaourt: name=pgcli
-  become: true
-  become_user: makepkg
