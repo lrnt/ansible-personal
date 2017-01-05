@@ -35,6 +35,7 @@
     - include: tasks/blacklist-pcspkr.yml
     - include: tasks/desktop.yml
     - include: tasks/basic-tools.yml
+    - include: tasks/python.yml
     - include: tasks/docker.yml
     - include: tasks/email.yml
     - include: tasks/smartcard.yml

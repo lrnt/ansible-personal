@@ -11,15 +11,9 @@
     - openvpn
     - pass
     - ranger
-    - ipython
-    - flake8
     - bc
     - net-tools
     - nfs-utils
-    - python-pip
-    - python2-pip
-    - python-virtualenv
-    - python2-virtualenv
     - unzip
 
 - name: Install pgcli

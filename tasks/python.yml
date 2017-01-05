@@ -1,0 +1,10 @@
+---
+- name: Install python tools
+  pacman: name={{ item }} state=present
+  with_items:
+    - python-pip
+    - python2-pip
+    - python-virtualenv
+    - python2-virtualenv
+    - ipython
+    - flake8
