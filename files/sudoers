@@ -1,3 +1,6 @@
+# Keep certain environment vars
+Defaults env_keep += "PIPSI_HOME PIPSI_BIN_DIR"
+
 root  ALL=(ALL) ALL
 %sudo ALL=(ALL) ALL
 
