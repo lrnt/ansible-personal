@@ -15,11 +15,14 @@
   become_user: makepkg
 
 - name: Install packages with pipsi
-  pipsi: name={{ item }} state=present
+  pipsi: name={{ item }} state=present python=/usr/bin/python3
   with_items:
     - httpie
     - pgcli
     - py3status
+    - khal
+    - khard
+    - vdirsyncer
   environment:
     - PIPSI_HOME: /usr/local/venvs
     - PIPSI_BINDIR: /usr/local/bin
