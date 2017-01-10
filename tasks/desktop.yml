@@ -22,6 +22,7 @@
     - xbindkeys
     - sxiv
     - evince
+    - xautolock
 
 - name: Install slack
   yaourt: name=slack-desktop
