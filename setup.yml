@@ -3,6 +3,7 @@
   connection: local
 
   vars_files:
+    - vars/common.yml
     - "vars/{{ lookup('env', 'AS_CONFIG') }}.yml"
 
   tasks:

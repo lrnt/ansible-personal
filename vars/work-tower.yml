@@ -1,13 +1,4 @@
 ---
-ansible_python_interpreter: /usr/bin/python2
-
-users:
-  - laurent
-
-users_inc_super:
-  - laurent
-  - root
-
 wifi:
   auto: false
   interface: wlp3s0
