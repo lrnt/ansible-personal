@@ -1,0 +1,7 @@
+---
+- name: Import GPG key
+  command: "gpg --keyserver pgp.mit.edu --recv-keys {{ gpg_key }}"
+  register: out
+  become: true
+  become_user: "{{ user }}"
+  changed_when: "'imported: 1' in out.stderr"
