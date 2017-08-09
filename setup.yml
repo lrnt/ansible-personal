@@ -29,6 +29,7 @@
     - include: tasks/xorg.yml
     - include: tasks/blacklist-pcspkr.yml
     - include: tasks/desktop.yml
+    - include: tasks/sound.yml
     - include: tasks/basic-tools.yml
     - include: tasks/python.yml
     - include: tasks/docker.yml

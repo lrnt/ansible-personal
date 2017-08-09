@@ -1,0 +1,7 @@
+---
+- name: Install pulseaudio and utils
+  pacman: name={{ item }} state=present
+  with_items:
+    - pulseaudio
+    - pavucontrol
+    - pamixer
