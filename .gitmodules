@@ -1,6 +1,6 @@
-[submodule "library/external_modules/ansible-yaourt"]
-	path = library/external_modules/ansible-yaourt
-	url = https://github.com/cdown/ansible-yaourt
 [submodule "library/external_modules/ansible-pipsi"]
 	path = library/external_modules/ansible-pipsi
 	url = https://github.com/lrnt/ansible-pipsi.git
+[submodule "library/external_modules/ansible-aur"]
+	path = library/external_modules/ansible-aur
+	url = git://github.com/cdown/ansible-aur.git

@@ -10,7 +10,7 @@
     - flake8
 
 - name: Install pipsi
-  yaourt: name=pipsi
+  aur: name=pipsi
   become: true
   become_user: makepkg
 
