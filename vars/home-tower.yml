@@ -1,0 +1,6 @@
+---
+wifi:
+  auto: false
+  interface: wlp36s0
+
+model: "Home Tower"

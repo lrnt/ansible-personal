@@ -18,6 +18,12 @@
     - xf86-input-synaptics
   when: model == "Thinkpad X230"
 
+- name: Set up Xorg for Home Tower
+  pacman: name={{ item }} state=present
+  with_items:
+    - xf86-video-amdgpu
+  when: model == "Home Tower"
+
 - name: Set up Xorg keyboard settings
   copy: src=files/xorg/00-keyboard.conf dest=/etc/X11/xorg.conf.d/00-keyboard.conf
 
