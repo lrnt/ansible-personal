@@ -7,5 +7,4 @@
     - dialog
 
 - name: Enable automatic wireless connections
-  service: name="netctl-auto@{{ wifi.interface }}" state=started enabled=yes
-  when: wifi.auto
+  service: name="netctl-auto@{{ wifi.interface }}" enabled={{ wifi.auto }}
