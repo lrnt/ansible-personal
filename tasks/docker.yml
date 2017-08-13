@@ -1,6 +1,9 @@
 ---
-- name: Install docker
-  pacman: name=docker state=present
+- name: Install docker and docker-compose
+  pacman: name={{ item }} state=present
+  with_items:
+    - docker
+    - docker-compose
 
 - name: Add local user to sudo group
   user: name={{ item }} groups=docker append=yes
