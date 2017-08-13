@@ -15,7 +15,6 @@
     - ghostscript
     - rxvt-unicode
     - urxvt-perls
-    - alsa-utils
     - libnotify
     - dunst
     - redshift
