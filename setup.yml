@@ -29,6 +29,7 @@
     - include: tasks/fonts.yml
     - include: tasks/xorg.yml
     - include: tasks/blacklist-pcspkr.yml
+    - include: tasks/modules.yml
     - include: tasks/desktop.yml
     - include: tasks/sound.yml
     - include: tasks/basic-tools.yml
