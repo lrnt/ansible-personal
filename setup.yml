@@ -21,10 +21,10 @@
     - include: tasks/network.yml
     - include: tasks/ntp.yml
     - include: tasks/pacman.yml
+    - include: tasks/aur.yml
     - include: tasks/ssh.yml
     - include: tasks/zsh.yml
     - include: tasks/users.yml
-    - include: tasks/aur.yml
     - include: tasks/sudo.yml
     - include: tasks/fonts.yml
     - include: tasks/xorg.yml
