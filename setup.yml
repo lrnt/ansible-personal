@@ -18,24 +18,24 @@
       register: installed_packages
       changed_when: false
 
-    - include: tasks/network.yml
-    - include: tasks/ntp.yml
-    - include: tasks/pacman.yml
-    - include: tasks/aur.yml
-    - include: tasks/ssh.yml
-    - include: tasks/zsh.yml
-    - include: tasks/users.yml
-    - include: tasks/sudo.yml
-    - include: tasks/fonts.yml
-    - include: tasks/xorg.yml
-    - include: tasks/blacklist-pcspkr.yml
-    - include: tasks/modules.yml
-    - include: tasks/desktop.yml
-    - include: tasks/sound.yml
-    - include: tasks/basic-tools.yml
-    - include: tasks/python.yml
-    - include: tasks/docker.yml
-    - include: tasks/email.yml
-    - include: tasks/smartcard.yml
-    - include: tasks/gpg.yml user=laurent
-    - include: tasks/dotfiles.yml user=laurent
+    - import_tasks: tasks/network.yml
+    - import_tasks: tasks/ntp.yml
+    - import_tasks: tasks/sudo.yml
+    - import_tasks: tasks/pacman.yml
+    - import_tasks: tasks/aur.yml
+    - import_tasks: tasks/ssh.yml
+    - import_tasks: tasks/zsh.yml
+    - import_tasks: tasks/users.yml
+    - import_tasks: tasks/fonts.yml
+    - import_tasks: tasks/xorg.yml
+    - import_tasks: tasks/blacklist-pcspkr.yml
+    - import_tasks: tasks/modules.yml
+    - import_tasks: tasks/desktop.yml
+    - import_tasks: tasks/sound.yml
+    - import_tasks: tasks/basic-tools.yml
+    - import_tasks: tasks/python.yml
+    - import_tasks: tasks/docker.yml
+    - import_tasks: tasks/email.yml
+    - import_tasks: tasks/smartcard.yml
+    - include_tasks: tasks/gpg.yml user=laurent
+    - include_tasks: tasks/dotfiles.yml user=laurent
