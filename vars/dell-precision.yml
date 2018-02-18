@@ -1,0 +1,6 @@
+---
+wifi:
+  auto: false
+  interface: wlp2s0
+
+model: "Dell Precision"
