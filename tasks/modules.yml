@@ -4,16 +4,3 @@
   with_items:
     - linux-headers
     - dkms
-
-- name: Install it87 module
-  aur: name=it87-dkms-git state=present
-  when: model == "Home Tower"
-  become: true
-  become_user: makepkg
-
-- name: Set up autoloading of it87 module
-  lineinfile:
-    path: /etc/modules-load.d/it87.conf
-    create: yes
-    state: present
-    line: 'it87'
