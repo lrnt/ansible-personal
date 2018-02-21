@@ -4,3 +4,9 @@ machines.
 ```
 ./run
 ```
+
+Make sure the external ansible libraries are present:
+
+```
+git submodule update --init
+```
