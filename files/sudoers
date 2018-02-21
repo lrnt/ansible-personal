@@ -1,5 +1,5 @@
 # Keep certain environment vars
-Defaults env_keep += "PIPSI_HOME PIPSI_BIN_DIR"
+Defaults env_keep += "PIPSI_HOME PIPSI_BIN_DIR SSH_AUTH_SOCK"
 
 root  ALL=(ALL) ALL
 %sudo ALL=(ALL) ALL
