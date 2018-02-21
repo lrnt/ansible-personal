@@ -1,0 +1,5 @@
+- name: Install syncthing
+  pacman: name=syncthing state=present
+
+- name: Enable syncthing
+  service: name="syncthing@{{ user}}" state=started enabled=yes

@@ -39,3 +39,4 @@
     - import_tasks: tasks/smartcard.yml
     - include_tasks: tasks/gpg.yml user=laurent
     - include_tasks: tasks/dotfiles.yml user=laurent
+    - include_tasks: tasks/syncthing.yml user=laurent
