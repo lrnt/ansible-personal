@@ -3,4 +3,4 @@ wifi:
   auto: true
   interface: wlp2s0
 
-model: "Dell Precision"
+model: "Dell XPS"
