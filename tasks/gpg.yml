@@ -1,6 +1,6 @@
 ---
 - name: Import GPG key
-  command: "gpg --keyserver pgp.mit.edu --recv-keys {{ gpg_key }}"
+  command: "gpg --keyserver keyserver.ubuntu.com --recv-keys {{ gpg_key }}"
   register: out
   become: true
   become_user: "{{ user }}"
