@@ -10,7 +10,7 @@
     - flake8
 
 - name: Install pipsi
-  aur: name=pipsi
+  aur: name=python-pipsi
   become: true
   become_user: makepkg
 
