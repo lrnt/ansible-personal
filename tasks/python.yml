@@ -25,4 +25,4 @@
     - vdirsyncer
   environment:
     - PIPSI_HOME: /usr/local/venvs
-    - PIPSI_BINDIR: /usr/local/bin
+    - PIPSI_BIN_DIR: /usr/local/bin
