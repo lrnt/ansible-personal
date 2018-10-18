@@ -17,7 +17,7 @@
   become_user: makepkg
 
 - name: Set up GPG key for falconindy (for cower)
-  command: gpg --keyserver pgp.mit.edu --recv-keys 1EB2638FF56C0C53
+  command: gpg --keyserver keyserver.ubuntu.com --recv-keys 1EB2638FF56C0C53
   when: "falconindy_key.rc != 0"
   become: yes
   become_user: makepkg
