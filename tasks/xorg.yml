@@ -24,6 +24,10 @@
 - name: Set up Xorg keyboard settings
   copy: src=files/xorg/00-keyboard.conf dest=/etc/X11/xorg.conf.d/00-keyboard.conf
 
+- name: Set up Xorg touchpad settings
+  copy: src=files/xorg/00-touchpad.conf dest=/etc/X11/xorg.conf.d/00-touchpad.conf
+  when: model == "Dell XPS"
+
 - name: Install VirtualBox guest utilities
   pacman: name=virtualbox-guest-utils state=present
   when: model == "VirtualBox"
