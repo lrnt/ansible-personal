@@ -14,11 +14,7 @@
       - xorg-xbacklight
 
 - name: Set up Xorg for Dell XPS
-  pacman:
-    state: present
-    name:
-      - xf86-video-intel
-      - xf86-input-synaptics
+  pacman: name=xf86-video-intel state=present
   when: model == "Dell XPS"
 
 - name: Set up Xorg for Home Tower
