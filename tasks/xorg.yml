@@ -1,37 +1,35 @@
 ---
 - name: Install Xorg base
-  pacman: name={{ item }} state=present
-  with_items:
-    - xorg-server
-    - xorg-xprop
-    - xorg-xmodmap
-    - xorg-xrandr
-    - xorg-xinit
-    - xorg-xev
-    - xorg-xset
-    - xorg-xrdb
-    - xorg-xbacklight
+  pacman:
+    state: present
+    name:
+      - xorg-server
+      - xorg-xprop
+      - xorg-xmodmap
+      - xorg-xrandr
+      - xorg-xinit
+      - xorg-xev
+      - xorg-xset
+      - xorg-xrdb
+      - xorg-xbacklight
 
-- name: Set up Xorg for Thinkpad X230
-  pacman: name={{ item }} state=present
-  with_items:
-    - xf86-video-intel
-    - xf86-input-synaptics
-  when: model == "Thinkpad X230"
+- name: Set up Xorg for Dell XPS
+  pacman:
+    state: present
+    name:
+      - xf86-video-intel
+      - xf86-input-synaptics
+  when: model == "Dell XPS"
 
 - name: Set up Xorg for Home Tower
-  pacman: name={{ item }} state=present
-  with_items:
-    - xf86-video-amdgpu
+  pacman: name=xf86-video-amdgpu state=present
   when: model == "Home Tower"
 
 - name: Set up Xorg keyboard settings
   copy: src=files/xorg/00-keyboard.conf dest=/etc/X11/xorg.conf.d/00-keyboard.conf
 
 - name: Install VirtualBox guest utilities
-  pacman: name={{ item }} state=present
-  with_items:
-    - virtualbox-guest-utils
+  pacman: name=virtualbox-guest-utils state=present
   when: model == "VirtualBox"
 
 - name: Set up autoloading of VirtualBox modules

@@ -1,8 +1,9 @@
 ---
 - name: Install tools for email
-  pacman: name={{ item }} state=present
-  with_items:
-    - mutt
-    - msmtp
-    - w3m
-    - isync
+  pacman:
+    state: present
+    name:
+      - mutt
+      - msmtp
+      - w3m
+      - isync

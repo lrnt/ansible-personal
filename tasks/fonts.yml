@@ -1,8 +1,9 @@
 ---
 - name: Install fonts
-  pacman: name={{ item }} state=present
-  with_items:
-    - adobe-source-code-pro-fonts
-    - ttf-dejavu
-    - ttf-liberation
-    - ttf-ubuntu-font-family
+  pacman:
+    state: present
+    name:
+      - adobe-source-code-pro-fonts
+      - ttf-dejavu
+      - ttf-liberation
+      - ttf-ubuntu-font-family

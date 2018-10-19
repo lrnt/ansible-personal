@@ -1,6 +1,7 @@
 ---
 - name: Install DKMS support
-  pacman: name={{ item }} state=present
-  with_items:
-    - linux-headers
-    - dkms
+  pacman:
+    state: present
+    name:
+      - linux-headers
+      - dkms

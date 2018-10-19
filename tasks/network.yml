@@ -1,10 +1,11 @@
 ---
 - name: Install wireless tools
-  pacman: name={{ item }} state=present
-  with_items:
-    - wpa_supplicant
-    - wpa_actiond
-    - dialog
+  pacman:
+    state: present
+    name:
+      - wpa_supplicant
+      - wpa_actiond
+      - dialog
 
 - name: Enable automatic wireless connections
   service: name="netctl-auto@{{ wifi.interface }}" enabled={{ wifi.auto }}

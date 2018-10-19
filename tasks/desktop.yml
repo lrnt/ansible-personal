@@ -1,33 +1,35 @@
 ---
 - name: Install i3 wm and tools
-  pacman: name={{ item }} state=present
-  with_items:
-    - i3-wm
-    - i3lock
-    - i3status
+  pacman:
+    state: present
+    name:
+      - i3-wm
+      - i3lock
+      - i3status
 
 - name: Install desktop utilities with pacman
-  pacman: name={{ item }} state=present
-  with_items:
-    - dmenu
-    - rofi
-    - imagemagick
-    - ghostscript
-    - rxvt-unicode
-    - urxvt-perls
-    - libnotify
-    - dunst
-    - redshift
-    - chromium
-    - maim
-    - xbindkeys
-    - sxiv
-    - feh
-    - evince
-    - xautolock
+  pacman:
+    state: present
+    name:
+      - dmenu
+      - rofi
+      - imagemagick
+      - ghostscript
+      - rxvt-unicode
+      - urxvt-perls
+      - libnotify
+      - dunst
+      - redshift
+      - chromium
+      - firefox
+      - maim
+      - xbindkeys
+      - sxiv
+      - feh
+      - evince
+      - xautolock
 
 - name: Install slack
   aur: name=slack-desktop
   become: yes
   become_user: makepkg
-

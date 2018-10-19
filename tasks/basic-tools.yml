@@ -1,17 +1,17 @@
 ---
 - name: Install basic tools
-  pacman: name={{ item }} state=present
-  with_items:
-    - gvim
-    - git
-    - ack
-    - postgresql
-    - rsync
-    - openvpn
-    - pass
-    - ranger
-    - bc
-    - net-tools
-    - nfs-utils
-    - unzip
-    - maim
+  pacman:
+    state: present
+    name:
+      - gvim
+      - git
+      - ack
+      - postgresql
+      - rsync
+      - openvpn
+      - pass
+      - ranger
+      - bc
+      - net-tools
+      - nfs-utils
+      - unzip
