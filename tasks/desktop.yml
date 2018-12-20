@@ -28,6 +28,7 @@
       - feh
       - evince
       - xautolock
+      - playerctl
 
 - name: Install slack
   aur: name=slack-desktop
