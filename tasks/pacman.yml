@@ -5,3 +5,6 @@
 - name: Update package lists
   pacman: update_cache=yes
   changed_when: false
+
+- name: Install pacman-contrib
+  pacman: name=pacman-contrib state=present
