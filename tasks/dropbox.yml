@@ -1,0 +1,21 @@
+---
+
+- name: Check dropbox key's existence
+  command: gpg --list-keys FC918B335044912E
+  changed_when: false
+  ignore_errors: true
+  register: dropbox_key
+  become: yes
+  become_user: makepkg
+
+- name: Set up GPG key for dropbox
+  command: gpg --keyserver keyserver.ubuntu.com --recv-keys FC918B335044912E
+  when: "dropbox_key.rc != 0"
+  become: yes
+  become_user: makepkg
+  retries: 3
+  delay: 1
+
+- name: Install dropbox
+  command: aur dropbox
+  when: "'dropbox' not in installed_packages.stdout_lines"

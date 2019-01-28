@@ -31,6 +31,7 @@
     - import_tasks: tasks/blacklist-pcspkr.yml
     - import_tasks: tasks/modules.yml
     - import_tasks: tasks/desktop.yml
+    - import_tasks: tasks/dropbox.yml
     - import_tasks: tasks/sound.yml
     - import_tasks: tasks/basic-tools.yml
     - import_tasks: tasks/python.yml
